@@ -1,0 +1,8 @@
+NODE_ENV // production vs development
+HOSTNAME // app hostname (used for the Post callback from Tap ex: https://www.google.com )
+PORT // express application listening port (set By Heroku)
+SECRET_KEY // for generating Hash for password etc (manually)
+MONGODB_URI // mongodb (set By Heroku or manually)
+
+EMAIL // your email (no-reply etc) - for sending email using SMTP (not needed)
+EMAIL_PASSWORD // your email password (not needed)

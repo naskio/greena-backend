@@ -1,0 +1,83 @@
+{
+  "name": "greena-backend",
+  "version": "1.0.0",
+  "description": "Junction 2019 - Sustainability Track",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehdiNassim/greena-backend.git"
+  },
+  "keywords": [
+    "junction",
+    "greena",
+    "2019",
+    "hackathon",
+    "js",
+    "node",
+    "express"
+  ],
+  "author": "Junction 2019 - AlphaTeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehdiNassim/greena-backend/issues"
+  },
+  "homepage": "https://github.com/MehdiNassim/greena-backend#readme",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./dist",
+    "start_dev": "NODE_ENV=development nodemon --exec babel-node ./src",
+    "mongo": "mongod",
+    "mongo_rs": "run-rs -v 4.2.1 --shell",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test_dev": "NODE_ENV=development nodemon --exec babel-node ./src/__tests__/index.test.js",
+    "clean": "rm -rf ./dist",
+    "build": "babel src -d dist",
+    "build_and_install": "babel src -d dist && node ./dist/installation",
+    "install_dev": "NODE_ENV=development babel-node src/installation",
+    "install_prod": "NODE_ENV=production node ./dist/installation"
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "watch": [
+      "src/*"
+    ],
+    "ext": "js, json",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.2",
+    "argon2-ffi": "^1.1.2",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.11",
+    "mongoose-sequence": "^5.2.2",
+    "mongoose-type-email": "^1.0.11",
+    "mongoose-unique-validator": "^2.0.3",
+    "mongoose-validator": "^2.1.0",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^12.0.0"
+  }
+}
