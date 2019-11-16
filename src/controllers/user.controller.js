@@ -111,12 +111,7 @@ export const updateProfile = async (req, res, next) => {
         error.status = 400;
         return next(error);
     }
-    const updates = {
-        firstName,
-        lastName,
-        email,
-        phone,
-    };
+    const updates = req.body;
 
     // if update password
     if (password && !passwordStrengthRegex.test(password)) {
