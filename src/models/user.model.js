@@ -15,7 +15,7 @@ const UserSchema = new Schema({
         },
         phone: {
             type: String,
-            unique: true,
+            // unique: true,
             validate: {
                 validator: async (v) => (v && phoneRegex.test(v)),
                 message: props => `{${props.value}} is not a valid {${props.path}}.`,
@@ -50,7 +50,7 @@ const UserSchema = new Schema({
 );
 
 UserSchema.index({
-    phone: 1,
+    // phone: 1,
     email: 1,
 });
 
