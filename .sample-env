@@ -6,3 +6,9 @@ MONGODB_URI // mongodb (set By Heroku or manually)
 
 EMAIL // your email (no-reply etc) - for sending email using SMTP (not needed)
 EMAIL_PASSWORD // your email password (not needed)
+
+ADMIN_FIRST_NAME
+ADMIN_LAST_NAME
+ADMIN_EMAIL
+ADMIN_PHONE
+ADMIN_PASSWORD
